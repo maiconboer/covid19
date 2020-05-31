@@ -1,0 +1,21 @@
+<header class="header">
+
+    <section class="container container-select">
+
+        <div class="logo">
+            <img src="assets/icons/coronavirus.svg" alt="">    
+        </div>
+
+        <div>
+            <select class="select-country" name="select-country">
+                {% for country in arrayContries %}
+                    <option value="{{country}}">{{country}}</option>
+                {% endfor %}
+            </select>
+
+            <button class="btn-search">Buscar</button>
+        </div>
+        
+    </section>
+
+</header>

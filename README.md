@@ -18,7 +18,8 @@
 :construction_worker: Instalação | :rocket: Execução  
 
 Faça um clone desse repositório rodando:  
-**git clone https://github.com/maiconboer/covid19.git**  
+
+        git clone https://github.com/maiconboer/covid19.git 
 
 Entre na pasta rodando pelo terminal: cd covid19  
 Rode npm i para instalar as dependências do projeto  

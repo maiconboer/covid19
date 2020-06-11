@@ -21,12 +21,13 @@ Faça um clone desse repositório rodando:
 
         git clone https://github.com/maiconboer/covid19.git 
 
-Entre na pasta rodando pelo terminal: cd covid19  
-Rode npm i para instalar as dependências do projeto  
-Rode npm start para iniciar o servidor de desenvolvimento.  
+Entre na pasta rodando pelo terminal: **cd covid19**    
+Rode **npm install** para instalar as dependências do projeto  
+Rode **npm start** para iniciar o servidor de desenvolvimento.  
 
 ------------------------------------------
 **Dependencias utilizadas:**     
+
     express  
     node-fetch  
     nunjucks  

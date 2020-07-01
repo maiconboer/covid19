@@ -43,7 +43,7 @@ async function getDataCountries(country) {
         update.appendChild(paragraph1El)
 
         document.querySelectorAll('.quantidades').forEach((item, index) => {
-            item.innerHTML = data[index]
+            item.innerHTML = data[index].toLocaleString("de-DE")
         })
 
     return result

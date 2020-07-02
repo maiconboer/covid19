@@ -6,10 +6,11 @@ exports.searchCountries = async function () {
     try {
         let contriesResponse = await fetch(`https://covid19.mathdro.id/api/countries`)
         let result = await contriesResponse.json()
+        
+        arrayContries.push('Selecione o país')
 
         for (const key in result.countries) {
             let countryName = result.countries[key].name
-
             arrayContries.push(countryName)
 
         }

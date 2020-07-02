@@ -3,14 +3,15 @@
     --bg-color2: #dd5555;
     --bg-color3: #ffffff;
     --font-color1: #333333;
-    --shadow: 0px 2px 6px -4px rgba(0,0,0,0.8);
+    --shadow: 0px 2px 6px -4px rgba(0, 0, 0, 0.8);
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
+    ;
 }
 
 body {
@@ -31,24 +32,82 @@ img {
 /* header */
 
 .header .container-select {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header .logo {
     display: flex;
-    justify-content: center;
-    margin: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 40px 20px 40px;
 }
 
 .header .container-select img {
-    width: 30%;
-    
+    margin-right: 10px;
+    width: 25%;
 }
 
-.header .select-country,
-.header .btn-search {
+/* GENERAL */
+
+.header div.general {
+    max-width: 360px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    padding: 30px;
+    background-color: var(--bg-color3);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+}
+
+.header div.general div.header-general {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header div.general div.header-general img {
+    margin-right: 10px;
+    width: 10%;
+}
+
+.header div.general div.header-general h3 {
+    margin: 20px 0 20px 0;
+}
+
+.header div.general p {
+    margin: 0 0 10px 0;
+}
+
+.header div.general .general_confirmados {
+    color: #e0ae25;
+}
+
+.header div.general .general_recuperados {
+    color: #5ab63b;
+}
+
+.header div.general .general_mortes {
+    color: #df0f08;
+}
+
+.header div.general p span {
+    font-size: 12px;
+}
+
+.header div.general .last-update-general {
+    margin-top: -13px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.header .select-country, .header .btn-search {
     border: 2px solid var(--bg-color2);
     border-radius: 4px;
     padding: 8px 16px;
@@ -119,16 +178,10 @@ img {
 .recommendations {
     display: grid;
     gap: 20px;
-    grid-template-areas: 
-        "recommendation-1 recommendation-1 recommendation-2"
-        "recommendation-3 recommendation-4 recommendation-2"
-        "recommendation-5 recommendation-4 recommendation-6"
-        "recommendation-5 recommendation-7 recommendation-7"
-        "recommendation-8 recommendation-8 recommendation-8";
+    grid-template-areas: "recommendation-1 recommendation-1 recommendation-2" "recommendation-3 recommendation-4 recommendation-2" "recommendation-5 recommendation-4 recommendation-6" "recommendation-5 recommendation-7 recommendation-7" "recommendation-8 recommendation-8 recommendation-8";
 }
 
 .recommendation-1 {
-
     grid-area: recommendation-1;
 }
 
@@ -186,72 +239,63 @@ img {
 /* mobile */
 
 @media screen and (max-width: 600px) {
+    .header .logo {
+        flex-direction: column;
+    }
+    .header div.general {        
+        max-width: 320px;
+        width: 300px;
+        padding: 30px 10px;
+        margin-top: 15px;
+    }
+    .header div.general p {
+        font-size: 12px;
+    }
     .header .btn-search {
         margin-top: 10px;
         max-width: 255px;
         width: 100%;
     }
-
     .container-select div:nth-child(2) {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
-    .container-informations .quantidades {      
-        font-size: 24px;    
+    .container-informations .quantidades {
+        font-size: 24px;
         padding: 20px 10px;
         height: 66px;
     }
-    
-    .container-informations div p:nth-child(2) {       
+    .container-informations div p:nth-child(2) {
         font-size: 14px;
-        font-weight: bold;      
+        font-weight: bold;
         padding: 10px;
     }
-
     .container-informations .data {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2;
         gap: 20px;
-
-        grid-template-areas: 
-        "confirmados recuperados"
-        "mortes mortes";
-    } 
-
+        grid-template-areas: "confirmados recuperados" "mortes mortes";
+    }
     .confirmados {
         grid-area: confirmados;
     }
-
     .recuperados {
         grid-area: recuperados;
     }
-
     .mortes {
         grid-area: mortes;
     }
-
     .container-informations .data div:nth-child(3) {
         margin-top: 0;
     }
-
     .container-recommendations {
         margin: 20px auto;
     }
-
     .recommendations {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-            "recommendation-1"
-            "recommendation-2"
-            "recommendation-3"
-            "recommendation-4" 
-            "recommendation-5"
-            "recommendation-6"
-            "recommendation-7"
-            "recommendation-8";
+        grid-template-areas: "recommendation-1" "recommendation-2" "recommendation-3" "recommendation-4" "recommendation-5" "recommendation-6" "recommendation-7" "recommendation-8";
     }
 }

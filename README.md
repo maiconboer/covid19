@@ -15,7 +15,7 @@
 
 ------------------------------------------
 
-Para listas os países, consome a API:
+Para listar os países, consome a API:
 
     https://covid19.mathdro.id/api/countries/
     

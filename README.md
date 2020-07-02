@@ -15,6 +15,17 @@
 
 ------------------------------------------
 
+Para listas os países, consome a API:
+
+    https://covid19.mathdro.id/api/countries/
+    
+Para exibir os números (confirmados, recuperados e mortes), consome a API 
+
+    https://covid19.mathdro.id/api/countries/${nome-do-país}`
+    
+    
+------------------------------------------
+
 :construction_worker: Instalação | :rocket: Execução  
 
 Faça um clone desse repositório rodando:  
